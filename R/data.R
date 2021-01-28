@@ -1,4 +1,12 @@
+#' Access data sets used for tutorials and problem sets
+#'
+#' @param name The name of the data set
+#' @return An object, typically a data frame
+#' @examples
+#' ols_data <- get_MktgAnalytics_data("ps-1-ols")
+#'
 #' @export
+#'
 get_MktgAnalytics_data <- function(name = NULL) {
 	name <- tolower(name)
 
