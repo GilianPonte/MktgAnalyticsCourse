@@ -31,5 +31,17 @@ get_MktgAnalytics_data <- function(name = NULL) {
 	  utils::data('ps2_conjoint', package = 'MktgAnalyticsCourse', envir = e)
 	  assign('d', e$ps2_conjoint, envir = e)
 	}
-	e$d
+	if (name %in% c('module-8-tutorial')) {
+	  utils::data('m8_aggregate', package = 'MktgAnalyticsCourse', envir = e)
+	  assign('d', e$m8_aggregate, envir = e)
+	}
+	if (name %in% c('ps-4', 'ps-4-sales')) {
+	  utils::data('ps4_aggregate', package = 'MktgAnalyticsCourse', envir = e)
+	  assign('d', e$ps4_aggregate, envir = e)
+	}
+	if (!is.null(e$d)) {
+	  return(e$d)
+	}
+	msg <- paste0("\n\n  There is no data set named '", name, "'.\n\n  This could because you have misspelled the name of the data set,\n  or it might be due to the MktgAnalyticsCourse R package being\n  updated after you installed it.\n\n  To reinstall the MktgAnalyticsCourse R package, run the following R code:\n\n    unloadNamespace('MktgAnalyticsCourse')\n    remotes::install_github('jasonmtroos/MktgAnalyticsCourse')\n\n")
+  stop(msg)
 }
