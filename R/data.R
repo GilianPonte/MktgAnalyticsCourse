@@ -39,6 +39,14 @@ get_MktgAnalytics_data <- function(name = NULL) {
 	  utils::data('ps4_aggregate', package = 'MktgAnalyticsCourse', envir = e)
 	  assign('d', e$ps4_aggregate, envir = e)
 	}
+	if (name %in% c('module-10-abtest', 'ps-5-abtest')) {
+	  utils::data('rta', package = 'MktgAnalyticsCourse', envir = e)
+	  assign('d', e$rta, envir = e)
+	}
+	if (name %in% c('ps-5-demo')) {
+	  utils::data('rta_demo', package = 'MktgAnalyticsCourse', envir = e)
+	  assign('d', e$rta_demo, envir = e)
+	}
 	if (!is.null(e$d)) {
 	  return(e$d)
 	}
