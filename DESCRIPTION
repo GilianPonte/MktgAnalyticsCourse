@@ -1,7 +1,7 @@
 Package: MktgAnalyticsCourse
 Type: Package
 Title: Data and Tools for my Marketing Analytics Course
-Version: 0.1.0
+Version: 1.2023.0
 Authors@R: 
     person(given = "Jason",
            family = "Roos",
