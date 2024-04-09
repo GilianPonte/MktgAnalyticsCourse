@@ -27,6 +27,10 @@ get_MktgAnalytics_data <- function(name = NULL) {
 	  utils::data('ps1_logistic', package = 'MktgAnalyticsCourse', envir = e)
 	  assign('d', e$ps1_logistic, envir = e)
 	}
+	if (name %in% c('ps-1-logistic1')) {
+	  utils::data('ps1_logistic1', package = 'MktgAnalyticsCourse', envir = e)
+	  assign('d', e$ps1_logistic1, envir = e)
+	}
 	if (name %in% c('ps-2-conjoint')) {
 	  utils::data('ps2_conjoint', package = 'MktgAnalyticsCourse', envir = e)
 	  assign('d', e$ps2_conjoint, envir = e)
