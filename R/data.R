@@ -54,6 +54,6 @@ get_MktgAnalytics_data <- function(name = NULL) {
 	if (!is.null(e$d)) {
 	  return(e$d)
 	}
-	msg <- paste0("\n\n  There is no data set named '", name, "'.\n\n  This could because you have misspelled the name of the data set,\n  or it might be due to the MktgAnalyticsCourse R package being\n  updated after you installed it.\n\n  To reinstall the MktgAnalyticsCourse R package, run the following R code:\n\n    unloadNamespace('MktgAnalyticsCourse')\n    remotes::install_github('jasonmtroos/MktgAnalyticsCourse')\n\n")
+	msg <- paste0("\n\n  There is no data set named '", name, "'.\n\n  This could because you have misspelled the name of the data set,\n  or it might be due to the MktgAnalyticsCourse R package being\n  updated after you installed it.\n\n  To reinstall the MktgAnalyticsCourse R package, run the following R code:\n\n    unloadNamespace('MktgAnalyticsCourse')\n    remotes::install_github('GilianPonte/MktgAnalyticsCourse')\n\n")
   stop(msg)
 }
